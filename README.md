@@ -1,0 +1,13 @@
+# Interventure WP theme
+
+This is HTML/CSS/JS project with static content, html pages/components written in php, with SCSS preprocessor
+
+## SCSS compiler
+Run `npm run scss:watch` for scss preprocessing and watching scss file changes.
+
+## Javascript
+
+jQuery libraries used:
+
+**Sliders**  - http://kenwheeler.github.io/slick/
+

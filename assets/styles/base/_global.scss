@@ -1,0 +1,31 @@
+html {
+	overflow-x: hidden;
+    background-color: $light;
+}
+body {
+	overflow-x: hidden; position: relative;
+	-webkit-overflow-scrolling: touch;
+}
+
+strong{
+	font-weight: bold;
+}
+
+.has-bgr{
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
