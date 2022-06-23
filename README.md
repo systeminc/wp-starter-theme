@@ -1,13 +1,13 @@
-# Interventure WP theme
+## Dependencies
 
-This is HTML/CSS/JS project with static content, html pages/components written in php, with SCSS preprocessor
+Install `nvm`, and run `nvm use` to set right Node version.
 
-## SCSS compiler
-Run `npm run scss:watch` for scss preprocessing and watching scss file changes.
+Run `npm install` to install required packages.
 
-## Javascript
+## Scripts
+Run `npm run watch` to build CSS from SCSS on the run for development purposes.
 
-jQuery libraries used:
+Run `npm run build` to build compressed and autoprefixed CSS for production.
 
-**Sliders**  - http://kenwheeler.github.io/slick/
+
 

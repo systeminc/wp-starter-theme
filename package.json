@@ -1,0 +1,16 @@
+{
+	"name": "npm-node-sass",
+	"version": "2022.06.23",
+	"scripts": {
+		"watch": "node-sass assets/styles/main.scss assets/styles/main.min.css --watch",
+		"compress": "node-sass assets/styles/main.scss assets/styles/main.min.css --sourcemap=none --output-style compressed",
+		"prefix": "postcss --replace --no-map --use autoprefixer -b 'last 2 versions' assets/styles/main.min.css",
+		"build": "npm run compress && npm run prefix"
+	},
+	"dependencies": {
+		"autoprefixer": "^10.4.7",
+		"node-sass": "^7.0.1",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^9.1.0"
+	}
+}

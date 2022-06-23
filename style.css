@@ -1,12 +1,10 @@
 /**
-    Theme Name: {{PROJECTNAME}}
-    Version: {{YYYY.MM.DD}}
-    Author: System Digital Studio
-    Author URI: https://systemstudio.co/
+    Theme Name: The SurfRow Residences
+    Version: 2022.06.23
+    Author: The Seventh Art
+    Author URI: https://theseventhart.com/
     Licence: Proprietary Software
-    Text Domain: system_wp_theme
+    Text Domain: custom_wp_theme
   
-    Description: {{PROJECTNAME}} custom made Wordpress theme
+    Description: The SurfRow Residences custom made Wordpress theme
 */
-
-@import url("styles/main.css");
