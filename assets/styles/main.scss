@@ -5,8 +5,26 @@
     Author URI: https://systemstudio.co/ || https://theseventhart.com/
     Licence: Proprietary Software
     Text Domain: system_wp_theme || t7a_wp_theme
-  
+
     Description: {{PROJECTNAME}} custom made Wordpress theme
 */
 
-@import url("styles/main.css");
+// Abstracts
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+// Base
+@import "base/normalize";
+@import "base/reset";
+@import "base/typography";
+
+// Components
+@import 'components/blocks';
+@import 'components/buttons';
+
+// Layouts
+@import 'layout/header';
+@import 'layout/footer';
+
+// Pages
+@import 'pages/home';
