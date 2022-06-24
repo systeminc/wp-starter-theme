@@ -46,3 +46,27 @@
   bottom: auto;
   left: auto;
 }
+
+//Animated link underline
+@mixin underlined-link($color) {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height: 1px;
+    background-color: $color;
+    transition: all 400ms;
+    display: block;
+  }
+
+  &:hover {
+    &:after{
+      width:100%;
+    }
+  }
+}
