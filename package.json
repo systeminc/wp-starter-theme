@@ -3,9 +3,9 @@
 	"version": "2022.06.23",
 	"scripts": {
 		"watch": "node-sass assets/styles/main.scss assets/styles/main.min.css --watch",
-		"compress": "node-sass assets/styles/main.scss assets/styles/main.min.css --sourcemap=none --output-style compressed",
+		"parse": "node-sass assets/styles/main.scss assets/styles/main.min.css --sourcemap=none",
 		"prefix": "postcss --replace --no-map --use autoprefixer -b 'last 2 versions' assets/styles/main.min.css",
-		"build": "npm run compress && npm run prefix"
+		"build": "npm run parse && npm run prefix"
 	},
 	"dependencies": {
 		"autoprefixer": "^10.4.7",
