@@ -3,6 +3,7 @@
 @import 'abstracts/variables';
 
 // Base
+@import "base/global";
 @import "base/normalize";
 @import "base/reset";
 @import "base/typography";
@@ -12,8 +13,9 @@
 @import 'components/buttons';
 
 // Layouts
-@import 'layout/header';
 @import 'layout/footer';
+@import 'layout/global';
+@import 'layout/header';
 
-// Pages
-@import 'templates/home';
+// Templates
+@import 'templates/front-page';

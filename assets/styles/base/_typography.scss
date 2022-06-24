@@ -1,10 +1,41 @@
-/*
-IMPORT FONTS
--------------------------------------------- */
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800&display=swap');
-
 // $body-font: 'Montserrat', sans-serif;
 
-html, body{
-    // font-family: $body-font;
+@mixin custom-font($family: arial, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src:url('../fonts/#{$family}.eot');
+    src:url('../fonts/#{$family}.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/#{$family}.woff') format('woff'),
+    url('../fonts/#{$family}.woff2') format('woff2'),
+    url('../fonts/#{$family}.ttf') format('truetype'),
+    url('../fonts/#{$family}.svg#icon') format('svg');
+    font-weight: $weight;
+    font-style: $style;
+  }
 }
+
+//$fonts:
+//  'NeueHaasUnicaPro-Light',
+//  'NeueHaasUnicaPro-Bold';
+//
+//@each $font in $fonts {
+//  @include custom-font($font);
+//}
+//
+//@mixin light-font() {
+//  font-family: 'NeueHaasUnicaPro-Light';
+//}
+//
+//@mixin bold-font() {
+//  font-family: 'NeueHaasUnicaPro-Bold';
+//}
+//
+//html, body{
+//  @include light-font;
+//  font-size: 16px;
+//}
+//
+//h1, h2, h3, .bold, strong {
+//  @include bold-font;
+//}
