@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * The theme includes file
  *
@@ -11,25 +11,25 @@ define('THEME_ASSETS', get_template_directory_uri() . '/assets/');
 
 // THEME ASSETS
 function enqueueStylesAndScripts() {
-    
+
     // STYLES
-    wp_register_style('main', THEME_ASSETS . 'style/main.min.css', array(), filemtime(get_theme_file_path('/assets/style/main.min.css')));
+    wp_register_style('main', THEME_ASSETS . 'styles/main.min.css', [], filemtime(get_theme_file_path('assets/styles/main.min.css')));
     wp_enqueue_style('main');
-    
+
     // HEADER SCRIPTS
     // wp_register_script('modernizr', THEME_ASSETS . 'js/libs/modernizr.js');
     // wp_enqueue_script('modernizr');
-    
+
     // FOOTER SCRIPTS
-    wp_deregister_script('jquery'); 
+    wp_deregister_script('jquery');
     wp_register_script('jquery', '//code.jquery.com/jquery-3.6.0.min.js', FALSE, '1.11.0', TRUE);
     wp_enqueue_script('jquery');
-    wp_register_script('device', THEME_ASSETS . 'js/libs/jquery.device.js', array(), false, true);
-    wp_enqueue_script('device');
-    wp_register_script('preloading', THEME_ASSETS . 'js/libs/jquery.preloading.js', FALSE, '1.11.0', TRUE);
-    wp_enqueue_script('preloading');
-    wp_register_script('init', THEME_ASSETS . 'js/init.js', array(), false, true);
+
+    wp_register_script('tselectbox', THEME_ASSETS . 'js/libs/t.selectbox.js', array(), filemtime(get_theme_file_path('assets/js/libs/t.selectbox.js')), true);
+    wp_enqueue_script('tselectbox');
+
+    wp_register_script('init', THEME_ASSETS . 'js/init.js', array(), filemtime(get_theme_file_path('assets/js/init.js')), true);
     wp_enqueue_script('init');
-    
+
 }
 add_action('wp_enqueue_scripts', 'enqueueStylesAndScripts');
