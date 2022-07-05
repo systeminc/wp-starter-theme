@@ -1,9 +1,10 @@
 /*
     Custom Selectbox jQuery Plugin
     Tirien.com
-    Rev: 2022-06-29
-    
-    Usage: $(".custom-select").tSelectbox([options]);
+    $Rev: 385 $
+
+    Examples:
+    $("select").tSelectbox({firstIsPlaceholder: true});
 */
 
 $.fn.tSelectbox = function(userConfig) {
@@ -13,7 +14,7 @@ $.fn.tSelectbox = function(userConfig) {
         var inputSelect = $(el);
 
         var config = {
-            firstIsEmptyText: false
+            firstIsPlaceholder: false
         }
 
         $.extend(config, userConfig);
@@ -26,7 +27,7 @@ $.fn.tSelectbox = function(userConfig) {
         var options = dropdown.children();
         var selected = select.children(".cs-selected");
         var isOpened = false;
-        
+
         init();
 
         function inputChanged() {
@@ -45,13 +46,17 @@ $.fn.tSelectbox = function(userConfig) {
 
         function init() {
             inputSelect.change(inputChanged);
- 
+
             if (inputSelect.find('[selected]').length){
                 selectOption(options.filter('[value="'+inputSelect.find('[selected]').val()+'"]'));
             }
-            else if(config.firstIsEmptyText){
-                selectOption(options.filter(':first-child'));
-                options.filter(':first-child').hide();
+            else if(config.firstIsPlaceholder){
+                let placeholder = options.filter(':first-child');
+                selectOption(placeholder);
+                placeholder.hide();
+
+                inputSelect.find('[value="'+placeholder.attr('value')+'"]').val('');
+                placeholder.attr('value', '')
             }
 
             $(document).click(closeAll);
@@ -145,10 +150,10 @@ $.fn.tSelectbox = function(userConfig) {
             selectOption($(this));
             $(".cs-focused").removeClass('cs-focused');
             selected.focus();
-            
+
             if ( $(this).data('url') !==undefined) {
                 window.location = $(this).data('url');
-            } 
+            }
         });
 
         function focusOption(p, n) {
@@ -162,8 +167,9 @@ $.fn.tSelectbox = function(userConfig) {
         }
 
         function selectOption(o) {
-            if (o.length)            {
+            if (o.length) {
                 var v = o.attr('value');
+
                 var other_options = o.attr('selected', true).addClass('cs-hilighted').siblings();
                 other_options.attr('selected', false).removeClass('cs-hilighted');
 
