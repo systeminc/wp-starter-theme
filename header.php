@@ -17,8 +17,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<header>
-        
-    </header>
+    <?php wp_body_open(); ?>
 
     <div id="main">
