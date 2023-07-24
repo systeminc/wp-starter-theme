@@ -32,6 +32,7 @@ ol, ul, menu {
 /* For images to not be able to exceed their container */
 img {
     max-width: 100%;
+    height: auto;
 }
 
 /* removes spacing between cells in tables */
