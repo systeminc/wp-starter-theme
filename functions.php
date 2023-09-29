@@ -38,8 +38,8 @@ update_option( 'thumbnail_size_w', 600 );
 update_option( 'thumbnail_size_h', 600 );
 update_option( 'thumbnail_crop', false );
 
-update_option( 'meduim_size_w', 1600 );
-update_option( 'meduim_size_h', 1600 );
+update_option( 'medium_size_w', 1600 );
+update_option( 'medium_size_h', 1600 );
 
 update_option( 'large_size_w', 2500 );
 update_option( 'large_size_h', 2500 );
