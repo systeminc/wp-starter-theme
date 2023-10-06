@@ -12,7 +12,5 @@ function empty(v){
 }
 
 (function ($) {
-    $(document).ready(function () {
-        
-    });
+   
 }(jQuery));
