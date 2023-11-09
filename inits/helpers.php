@@ -4,6 +4,8 @@
      */
 
      function dd($var) {
-        echo '<pre>' . var_dump($var) . '</pre>';
+        echo '<pre>';
+        print_r($var);
+        echo '</pre>';
         die();
      }
