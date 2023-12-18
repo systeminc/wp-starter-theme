@@ -1,7 +1,7 @@
 //Responsive breakpoints
 @mixin breakpoint($size) {
   @if $size == xs {
-    @media (max-width: 420px) {
+    @media (max-width: 480px) {
       @content ;
     }
   } @else if $size == sm {
