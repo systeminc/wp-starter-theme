@@ -1,72 +1,81 @@
 //Responsive breakpoints
 @mixin breakpoint($size) {
-  @if $size == xs {
-    @media (max-width: 480px) {
-      @content ;
+    @if $size == xs {
+        @media (max-width: 480px) {
+            @content ;
+        }
+    } @else if $size == sm {
+        @media (max-width: 768px) {
+            @content ;
+        }
+    } @else if $size == md {
+        @media (max-width: 1080px) {
+            @content ;
+        }
+    } @else if $size == l {
+        @media (min-width: 1512px) {
+            @content ;
+        }
+    } @else if $size == xl {
+        @media (min-width: 1281px) {
+            @content ;
+        }
+    } @else if $size == xxl {
+        @media (min-width: 1920px) {
+            @content ;
+        }
+    } @else {
+        @media (max-width: $size + 'px') {
+            @content ;
+        }
     }
-  } @else if $size == sm {
-    @media (max-width: 768px) {
-      @content ;
-    }
-  } @else if $size == md {
-    @media (max-width: 1080px) {
-      @content ;
-    }
-  } @else if $size == xl {
-    @media (min-width: 1281px) {
-      @content ;
-    }
-  } @else if $size == xxl {
-    @media (min-width: 1920px) {
-      @content ;
-    }
-  }
 }
+
 
 //Background standard settings
 @mixin bgr($repeat: no-repeat, $position: 50% 50%, $color: transparent, $size: cover) {
-  background-repeat: $repeat;
-  background-position: $position;
-  background-color: $color;
-  background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+    background-color: $color;
+    background-size: $size;
 }
 
 //Standard call for pseudo element
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
-  content: $content;
-  display: $display;
-  position: $pos;
+    content: $content;
+    display: $display;
+    position: $pos;
 }
 
 //Position reset
 @mixin position-reset() {
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
 }
 
 //Animated link underline
 @mixin underlined-link($color) {
-  position: relative;
-  cursor: pointer;
+    position: relative;
+    cursor: pointer;
 
-  &:after {
-    content: '';
-    position: absolute;
-    left:0;
-    bottom:0;
-    width:0%;
-    height: 1px;
-    background-color: $color;
-    transition: all 400ms;
-    display: block;
-  }
-
-  &:hover {
-    &:after{
-      width:100%;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: $color;
+        transition: all 400ms;
+        display: block;
     }
-  }
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
 }
