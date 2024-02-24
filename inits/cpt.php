@@ -28,8 +28,8 @@
 //         'menu_position' => 24,
 //         'menu_icon'     => __( 'dashicons-groups' ),
 //         'supports'      => array('title',  'thumbnail', 'editor'),
-// 		'show_in_rest' 	=> true,
-//         'exclude_from_search' => false
+// 		   'show_in_rest' 	=> true,
+//         'exclude_from_search' => false,
 //     );
 //     register_post_type('testimonials', $args);
 // }
