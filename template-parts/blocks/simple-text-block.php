@@ -11,18 +11,16 @@
 
 // Create class attribute allowing for custom "className" and "align" values.
 $className = 'simple-text-block';
+
 if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
 }
 
-$block_id = get_field('block_id');
-
 $title = get_field('title');
 $content = get_field('content');
-
 ?>
 
- <section class="<?php echo esc_attr($className); ?>" <?php echo $block_id ? 'id="' . $block_id . '"' : ''; ?>>
+ <section class="<?php echo esc_attr($className); ?>" <?php echo $block['anchor'] ? 'id="' . $block['anchor'] . '"' : ''; ?>>
     <div class="width-wrap fadein-wrap">
         <h3 class="heading"><?php echo $title; ?></h3>
         <div class="simple-text-content"><?php echo $content; ?></div>

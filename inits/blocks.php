@@ -17,6 +17,7 @@ function register_acf_block_types()
         'mode'            => 'edit',
         'supports'        => array(
             'multiple' => true,
+            'anchor' => true,
         ),
     ));
 
@@ -31,6 +32,7 @@ function register_acf_block_types()
         'mode'            => 'edit',
         'supports'        => array(
             'multiple' => true,
+            'anchor' => true,
         ),
     ));
 
