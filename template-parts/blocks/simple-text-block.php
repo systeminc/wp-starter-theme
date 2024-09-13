@@ -20,7 +20,7 @@ $title = get_field('title');
 $content = get_field('content');
 ?>
 
- <section class="<?php echo esc_attr($className); ?>" <?php echo $block['anchor'] ? 'id="' . $block['anchor'] . '"' : ''; ?>>
+ <section class="<?php echo esc_attr($className); ?>" id="<?php echo $block['anchor'] ?? $block['id']; ?>">
     <div class="width-wrap fadein-wrap">
         <h3 class="heading"><?php echo $title; ?></h3>
         <div class="simple-text-content"><?php echo $content; ?></div>

@@ -24,7 +24,7 @@ $gallery = get_field('gallery');
 $reversed = get_field('reversed') ? "reversed" : '';
 ?>
 
-<section class="<?php echo esc_attr($className); ?> <?php echo $reversed; ?>" id="<?php echo $block['anchor'] ?? $block['id']; ?>">
+<section class="<?php echo esc_attr($className); ?> <?php echo $reversed; ?> swiper-<?php echo $block['id']; ?>" id="<?php echo $block['anchor'] ?? $block['id']; ?>">
     <div class="swiper gallery-wrap fadein-wrap">
         <div class="swiper-wrapper">
             <?php foreach( $gallery as $image ): ?>
@@ -53,7 +53,7 @@ $reversed = get_field('reversed') ? "reversed" : '';
 
 <script>
     document.addEventListener("SwiperReady", () => {
-        var block = $("#<?php echo $block['anchor'] ?? $block['id']; ?>");
+        var block = $(".swiper-<?php echo $block['id']; ?>");
 
         new Swiper(block.find(".swiper")[0], {
             slidesPerView: 1.2,
