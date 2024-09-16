@@ -2,9 +2,9 @@
 	"name": "npm-node-sass",
 	"version": "2023.03.17",
 	"scripts": {
-		"watch": "node-sass assets/styles/main.scss assets/styles/main.css --watch",
 		"parse": "node-sass assets/styles/main.scss assets/styles/main.css --sourcemap=none",
 		"prefix": "postcss --replace --no-map --use autoprefixer -b 'last 2 versions' assets/styles/main.css",
+		"watch": "npm run parse && node-sass assets/styles/main.scss assets/styles/main.css --watch",
 		"build": "npm run parse && npm run prefix"
 	},
 	"dependencies": {
