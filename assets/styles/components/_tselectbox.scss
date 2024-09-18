@@ -54,6 +54,10 @@ $highlightColor: $main-color-light;
     .cs-selected {
         background: inherit;
         border: none;
+
+        &[value=""] {
+            color: rgba($mainColor, 0.5);
+        }
     }
 
     .cs-hilighted {
@@ -65,8 +69,9 @@ $highlightColor: $main-color-light;
         position: absolute;
         border-bottom: 1px solid $mainColor;
         border-right: 1px solid $mainColor;
-        width: 10px;
-        height: 10px;
+        width: 1em;
+        height: auto;
+        aspect-ratio: 1;
         top: 50%;
         right: 10px;
         transform: translateY(-50%) rotate(45deg);
@@ -75,5 +80,5 @@ $highlightColor: $main-color-light;
 }
 
 .custom-combobox {
-    font-size: 14px;
+    font-size: 1em;
 }
