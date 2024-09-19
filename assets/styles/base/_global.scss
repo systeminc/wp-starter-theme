@@ -1,6 +1,7 @@
 body {
     position: relative;
 	-webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
 }
 
 strong{
