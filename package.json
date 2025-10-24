@@ -1,16 +1,16 @@
 {
-	"name": "npm-node-sass",
-	"version": "2023.03.17",
-	"scripts": {
-		"parse": "node-sass assets/styles/main.scss assets/styles/main.css --sourcemap=none",
-		"prefix": "postcss --replace --no-map --use autoprefixer -b 'last 2 versions' assets/styles/main.css",
-		"watch": "npm run parse && node-sass assets/styles/main.scss assets/styles/main.css --watch",
-		"build": "npm run parse && npm run prefix"
-	},
-	"dependencies": {
-		"autoprefixer": "^10.4.7",
-		"node-sass": "^8.0.0",
-		"npm-run-all": "^4.1.5",
-		"postcss-cli": "^9.1.0"
-	}
+  "name": "systemstudio-build-package",
+  "version": "2025.10.24",
+  "scripts": {
+    "watch": "sass main.scss main.css --watch",
+    "parse": "sass main.scss main.css --no-source-map",
+    "prefix": "postcss --replace --no-map --use autoprefixer -b 'last 2 versions' main.css",
+    "build": "npm run parse && npm run prefix"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.62.1"
+  }
 }
